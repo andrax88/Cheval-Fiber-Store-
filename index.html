@@ -14,10 +14,12 @@
     <main>
         <div class="product">
             <img src="product1.jpg" alt="Product 1">
-            <h2>Fibras cortadas com tesoura</h2>
+            <h2>fibras cortadas com tesoura</h2>
             <p>€19.99</p>
             <button onclick="addToCart('Product 1')">Add to Cart</button>
         </div>
+
+
 
         <div class="product">
             <img src="product2.jpg" alt="Product 2">
@@ -31,30 +33,16 @@
             <h2>Pecas off road para andar no asfalto</h2>
             <p>€299.99</p>
             <button onclick="addToCart('Product 3')">Add to Cart</button>
-        </div>
-        <div id="paypal-button-container"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=YOUR-CLIENT-ID"></script>
-<script>
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: '19.99' // Set the product price here
-                    }
-                }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                alert('Transaction completed by ' + details.payer.name.given_name);
-            });
-        }
-    }).render('#paypal-button-container');
-</script>
 
+	<div class="product">
+            <img src="product4.jpg" alt="Product 4">
+                    </div>
+        </div>
     </main>
 
+
+
     <script src="script.js"></script>
+
 </body>
 </html>
